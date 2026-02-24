@@ -1,0 +1,31 @@
+{
+  "featured": [
+    "images/painting1.jpg", "images/painting2.jpg", "images/painting3.jpg"
+  ],
+  "albums": [
+    {
+      "title": "Nature",
+      "images": ["images/painting1.jpg", "images/painting2.jpg", "images/painting3.jpg", "images/painting1.jpg", "images/painting2.jpg", "images/painting3.jpg"]
+    },
+    {
+      "title": "Abstract",
+      "images": ["images/painting1.jpg", "images/painting2.jpg"]
+    },
+    {
+      "title": "Oradea",
+      "images": ["images/painting1.jpg", "images/painting2.jpg", "images/painting3.jpg"]
+    },
+    {
+      "title": "Portraits",
+      "images": ["images/painting1.jpg", "images/painting2.jpg"]
+    },
+{
+      "title": "Landscapes",
+      "images": ["images/painting1.jpg", "images/painting2.jpg", "images/painting3.jpg"]
+    },
+    {
+      "title": "Old Masters",
+      "images": ["images/painting1.jpg", "images/painting2.jpg"]
+    }
+  ] 
+}
