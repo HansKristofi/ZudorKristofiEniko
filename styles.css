@@ -76,13 +76,13 @@ img {
 
 /* Scrolled State (White background) */
 .navbar.nav-scrolled {
-    background: #2d4400;
+    background: #ffffff;
     padding: 15px 0; /* Makes the navbar slightly slimmer when scrolling */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
 }
 
 .navbar.nav-scrolled .nav-links a {
-    color: rgb(255, 255, 255); /* Changes text to black */
+    color: #2d4400; /* Changes text to black */
 }
 
 /* Hero */
