@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         loader.style.opacity = '0';
         setTimeout(() => { loader.style.display = 'none'; }, 1000);
-    }, 2500);
+    }, 4400);
 });
 
 /* ═══════════════════════════════════════════════════════════════
@@ -218,3 +218,4 @@ document.addEventListener('click', (e) => {
     const lb = document.getElementById('lightbox');
     if (lb && e.target === lb) closeLightbox();
 });
+
