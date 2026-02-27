@@ -3,27 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Zudor Kristofi Eniko</title>
+    <title>Gallery | Zudor Kristófi Enikő</title>
+    <meta name="description" content="Browse the paintings of Zudor Kristófi Enikő – cityscapes, nature, portraits, and more.">
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content="Gallery | Zudor Kristófi Enikő">
+    <meta property="og:description" content="Browse original paintings and graphic works by Zudor Kristófi Enikő.">
+    <meta property="og:type"        content="website">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
         </div>
     </nav>
 
-    <div id="album-container"></div>
+    <div id="album-container">
 
-    <div id="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <button class="lb-prev" onclick="navigateLightbox(-1)">&#10094;</button>
-        <img id="lightbox-img" alt="Enlarged artwork">
-        <button class="lb-next" onclick="navigateLightbox(1)">&#10095;</button>
+        <!-- Gallery title injected by JS so it appears above albums -->
+        <div class="gallery-page-title">
+            <p class="eyebrow">Works</p>
+            <h1>Gallery</h1>
+            <div class="gold-line"></div>
+        </div>
+
     </div>
 
+    <!-- LIGHTBOX -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged artwork viewer">
+        <span class="close" onclick="closeLightbox()" aria-label="Close">&times;</span>
+        <button class="lb-prev" onclick="navigateLightbox(-1)" aria-label="Previous painting">&#10094;</button>
+        <img id="lightbox-img" alt="Enlarged painting">
+        <div class="lb-caption">
+            <div class="lb-title"  id="lb-title"></div>
+            <div class="lb-album" id="lb-album"></div>
+        </div>
+        <div class="lb-counter" id="lb-counter"></div>
+        <button class="lb-next" onclick="navigateLightbox(1)"  aria-label="Next painting">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Zudor Kristófi Enikő &nbsp;·&nbsp; All rights reserved</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
