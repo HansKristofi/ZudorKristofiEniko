@@ -3,36 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zudor Kristofi Eniko | Home</title>
+    <title>Zudor Kristófi Enikő | Painter</title>
+    <meta name="description" content="Zudor Kristófi Enikő – contemporary Hungarian painter and graphic artist from Oradea (Nagyvárad). Cityscapes, landscapes, and interior paintings.">
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content="Zudor Kristófi Enikő | Painter">
+    <meta property="og:description" content="Contemporary Hungarian painter and graphic artist from Oradea (Nagyvárad).">
+    <meta property="og:image"       content="profile.png">
+    <meta property="og:type"        content="website">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="loader"><video autoplay muted loop><source src="signature.mp4" type="video/mp4"></video></div>
 
-    <nav class="navbar">
+    <!-- LOADER -->
+    <div id="loader">
+        <video autoplay muted loop playsinline>
+            <source src="signature.mp4" type="video/mp4">
+        </video>
+        <span class="loader-name">Zudor Kristófi Enikő</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <header class="hero">
-        <img src="profile.png" class="profile-pic" alt="Painter Profile">
+        <img src="profile.png" class="profile-pic" alt="Zudor Kristófi Enikő – painter">
         <h1 class="site-title">Zudor Kristófi Enikő</h1>
-        <p class="intro-text">Contemporary Hungarian painter from Oradea (Nagyvárad)</p>
-        <a href="about.html" class="btn">More about Zudor Kristófi Enikő</a>
+        <p class="hero-subtitle">Painting what light remembers</p>
+        <div class="hero-divider"></div>
+        <p class="intro-text">Contemporary Hungarian painter &amp; graphic artist<br>from Oradea · Nagyvárad</p>
+        <a href="about.html" class="btn btn-anim">Discover her work</a>
     </header>
 
-    <section class="slideshow-section">
-        <div class="slider" id="main-slider">
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <div id="slide-holder"></div>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    <!-- FEATURED SLIDESHOW -->
+    <section class="slideshow-section" aria-label="Featured works">
+        <p class="section-label">Featured works</p>
+        <div class="slider">
+            <button class="prev" onclick="changeSlide(-1)" aria-label="Previous painting">&#10094;</button>
+            <div id="slide-holder" role="img" aria-label="Slideshow of featured paintings"></div>
+            <button class="next" onclick="changeSlide(1)"  aria-label="Next painting">&#10095;</button>
         </div>
-        <a href="gallery.html" class="btn">Go to the Gallery</a>
+        <div class="slide-dots"></div>
+        <a href="gallery.html" class="btn" style="margin-top:12px;">View Full Gallery</a>
     </section>
 
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Enquiries &amp; Collections</h2>
+        <p>Interested in acquiring a work or organising an exhibition?<br>Reach out directly.</p>
+        <a href="mailto:info@zudorkristofi.com" class="contact-email">info@zudorkristofi.com</a>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Zudor Kristófi Enikő &nbsp;·&nbsp; All rights reserved</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
