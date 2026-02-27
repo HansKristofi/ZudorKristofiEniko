@@ -3,51 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Zudor Kristofi Eniko</title>
+    <title>About | Zudor Kristófi Enikő</title>
+    <meta name="description" content="Biography of Zudor Kristófi Enikő – Hungarian painter and graphic artist born in 1960, from Oradea (Nagyvárad).">
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content="About | Zudor Kristófi Enikő">
+    <meta property="og:description" content="Hungarian painter and graphic artist born in 1960, from Oradea (Nagyvárad).">
+    <meta property="og:image"       content="profile2.png">
+    <meta property="og:type"        content="website">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
+            <a href="index.html#contact">Contact</a>
         </div>
     </nav>
 
     <main class="about-container">
-        <img src="profile2.png" class="bio-img">
-        <article class="essay">
+
+        <!-- Header -->
+        <div class="about-header">
+            <p class="eyebrow">About the artist</p>
             <h1>Zudor Kristófi Enikő</h1>
-            <p>Zudor-Kristófi Enikő is a contemporary Hungarian painter and graphic artist born in 1960. Her artistic identity is deeply rooted in the cultural landscape of Oradea (Nagyvárad), Romania.
+            <div class="gold-line"></div>
+        </div>
 
-Artistic Background and Style
-Enikő was born into a distinguished artistic family. Her primary mentor and teacher was her father, János Kristófi (1925–2014), a celebrated painter who was a defining figure in the art scene of Oradea for over five decades.
+        <div class="about-layout">
 
-Her work is characterized by several key themes and techniques:
+            <!-- Photo -->
+            <div class="bio-img-wrap">
+                <img src="profile2.png" class="bio-img" alt="Zudor Kristófi Enikő in her studio" loading="lazy">
+            </div>
 
-Urban Landscapes: She is best known for her cityscapes of Oradea, capturing the architectural essence and historical atmosphere of her hometown.
+            <!-- Biography -->
+            <article class="essay">
+                <p>
+                    Enikő is a contemporary Hungarian painter and graphic artist whose work is an intimate
+                    conversation between memory and place — rooted in the light, architecture, and seasons
+                    of her beloved Oradea (Nagyvárad).
+                </p>
 
-Nature and Parks: Her portfolio includes lyrical depictions of nature, such as "Parc toamna" (Autumn Park) and "Sétány" (Promenade), which often utilize soft light and seasonal colors.
+                <h2>Background</h2>
+                <p>
+                    Born in 1960, Enikő grew up in a household saturated with art. Her primary mentor was her
+                    father, János Kristófi (1925–2014), a celebrated painter who shaped the cultural identity
+                    of Oradea for over five decades. That inheritance is visible in every canvas she makes —
+                    a romantic attention to detail, a documentary instinct — yet her voice is entirely her own.
+                </p>
 
-Sacred and Interior Themes: She has produced works featuring churches and interior scenes, often using tempera and gouache on cardboard or canvas.
+                <h2>Style &amp; Themes</h2>
+                <p>
+                    Her work moves fluidly between the monumental and the lyrical. She is best known for her
+                    <em>cityscapes of Oradea</em> — architectural studies that capture the city's layered
+                    history in soft, precisely observed light. Alongside these urban works are gentle
+                    depictions of parks and promenades: <em>Parc toamna</em> (Autumn Park),
+                    <em>Sétány</em> (Promenade) — paintings where seasonal colour becomes a quiet emotional language.
+                </p>
+                <p>
+                    Sacred spaces and interior scenes recur throughout her career, rendered in tempera and
+                    gouache on cardboard or canvas. Her background as a graphic artist gives her work a
+                    distinctive precision — clean edges, controlled composition — that sets her apart from
+                    the looser romanticism of her father's generation.
+                </p>
 
-Technical Precision: While her father's style leaned toward a romantic-documentary spirit, Enikő's work often incorporates a distinct graphic quality, reflecting her background as both a painter and a graphic artist.
+                <h2>Exhibitions &amp; Collections</h2>
+                <p>
+                    Enikő has exhibited widely across Central Europe, often in family shows alongside
+                    her father and sister Judith Kristófi.
+                </p>
+                <ul>
+                    <li><strong>Stockholm (1981)</strong> — Early international debut alongside Judit Hoványi and János Kristófi</li>
+                    <li><strong>"Homage to Women" (1983)</strong> — Family exhibition, Oradea</li>
+                    <li><strong>Debrecen-Nagyvárad Graphics Auction (2010)</strong> — Featured work: <em>Templom</em> (Church)</li>
+                    <li>Group and solo exhibitions in Cluj-Napoca, Brașov, Győr, and Vienna</li>
+                </ul>
+                <p>
+                    Her paintings are held in private collections across Romania, Hungary, and Austria,
+                    and have been presented at the Kieselbach Gallery in Budapest and the Depozitul de Artă in Romania.
+                </p>
 
-Career Highlights
-Enikő’s career has been marked by both solo and joint family exhibitions, often showcasing alongside her father and other family members (such as Judith Kristófi).
+                <a href="gallery.html" class="btn" style="margin-top: 16px;">View the Gallery</a>
+            </article>
 
-Exhibitions: She has exhibited her work across Central Europe, including major shows in Romania (Oradea, Cluj-Napoca, Brașov), Hungary (Debrecen, Győr), and Austria.
+        </div>
 
-Notable Shows: * Stockholm (1981): A significant early international appearance alongside Judit Hoványi and János Kristófi.
-
-"Homage to Women" (1983): A family exhibition in Oradea.
-
-Debrecen-Nagyvárad Graphics Auction (2010): Her work "Templom" (Church) was a featured piece, highlighting her skill in interior architectural depiction.
-
-Collections: Her paintings are held in several private collections and have appeared in prominent art galleries like the Kieselbach Gallery in Budapest and the Depozitul de Artă in Romania.</p>
-        </article>
     </main>
-<script src="script.js"></script>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Zudor Kristófi Enikő &nbsp;·&nbsp; All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
